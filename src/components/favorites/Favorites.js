@@ -13,7 +13,7 @@ const Favorites= () => {
     const favNotes = useSelector(state => state.firestore.ordered.favNotes);
 
     return <div>
-        <NoteList notes={favNotes} col={3} />
+        <NoteList notes={favNotes} colmd={3} colsm={6} />
     </div>
 }
 

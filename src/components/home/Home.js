@@ -13,10 +13,10 @@ const Home = () => {
 
     return <div className="container">
         <div className="row">
-            <div className="col-md-4">
+            <div className="col-sm-6 col-md-4">
                 <Form />
             </div>
-            <div className="col-md-8">
+            <div className="col-sm-6 col-md-8">
                 <NoteList notes={notes} />
             </div>
         </div>

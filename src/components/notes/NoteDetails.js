@@ -11,7 +11,7 @@ const NoteDetails = ({ match: {params: {id} } }) => {
     
     const note = useSelector(state => state.firestore.ordered.note);
     
-    const { title='', content='', favorite='', createdAt='' } = note ? note[0] : {};
+    const { title='', content='', createdAt='' } = note ? note[0] : {};
 
     return <div className="container noteDetail p-4 d-flex flex-column">
         <div className="info">

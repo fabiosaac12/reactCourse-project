@@ -3,7 +3,7 @@ import { deleteNote, toggleFavNote } from "../../store/actions/noteActions";
 import moment from 'moment';
 import { Link } from "react-router-dom";
 
-const Note = ({ note, col }) => {
+const Note = ({ note, colmd, colsm }) => {
     const dispatch = useDispatch();
 
     const { title, content, createdAt, id, favorite } = note; 
@@ -14,7 +14,7 @@ const Note = ({ note, col }) => {
 
     const handleEdit = (e) => dispatch({ type: 'EDIT_NOTE', payload: note });
     
-    return <div className={ `note col-md-${col} text-wrap d-flex flex-column justify-content-center` }>
+    return <div className={ `note col-md-${colmd} col-sm-${colsm} text-wrap d-flex flex-column justify-content-center` }>
             <div className="bg">
                 <div className="icons d-flex justify-content-end">
                     <i onClick={ handleFavorite } className={ `favorite bi bi-heart${favorite ? '-fill' : ''} m-1` }></i>
