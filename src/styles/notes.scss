@@ -1,0 +1,40 @@
+@import 'variables.scss';
+
+.notelist {
+    .note {
+        padding: 5px;
+
+        a {
+            text-decoration: none;
+            color: #2b2b2b;
+        }
+
+        .bg {
+            padding: 10px;
+            background-color: $background;
+            border-radius: $border-radius;
+            transition: all 500ms;
+            i {
+                font-size: 18px;
+                transition: transform 50ms linear, color 500ms;
+                transition: transform 50ms linear, color 500ms;
+         cursor: pointer;
+                z-index: 1000;
+                &.favorite {
+                    color: #b00909;
+                }
+                &:active {
+                    transform: scale(1.2);
+                }
+            }
+            &:hover {
+                background-color: #e6eced;
+            }
+        }
+    }
+}
+
+.noteDetail {
+    background-color: $background;
+    border-radius: $border-radius;
+}
